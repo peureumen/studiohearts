@@ -45,6 +45,39 @@ const githubMods = [
   screenshots: []
 },
   {
+    slug: "audify",
+    name: "Audify",
+    repo: "peureumen/mods",
+    tag: "audifyreleases",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
+    tagline: "A free Soundify mod for Minecraft 26.3.",
+    about: "",
+    features: [],
+    screenshots: []
+  },
+  {
+  slug: "damage-indicators-3",
+  name: "Damage Indicators 3.0",
+  repo: "peureumen/mods",
+  tag: "dmginreleases",
+  thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/dmginthmb.png",
+  tagline: "Unofficial Java Port from Pixelbiester for Minecraft 26.3.",
+  about: "",
+  features: [],
+  screenshots: []
+},
+  {
+    slug: "shouldersandbeyond",
+    name: "Shoulders & Beyond",
+    repo: "peureumen/mods",
+    tag: "snbreleases",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
+    tagline: "Punchy! Moves' shoulder surfing camera standalone",
+    about: "",
+    features: [],
+    screenshots: []
+  },
+  {
     slug: "advanced-compass",
     name: "Advanced Compass++",
     repo: "peureumen/mods",
@@ -62,28 +95,6 @@ const githubMods = [
     tag: "afteffreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
     tagline: "Unofficial port of Combat Effects to 26.3",
-    about: "",
-    features: [],
-    screenshots: []
-  },
-  {
-    slug: "audify",
-    name: "Audify",
-    repo: "peureumen/mods",
-    tag: "audifyreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
-    tagline: "A free Soundify mod for Minecraft 26.3.",
-    about: "",
-    features: [],
-    screenshots: []
-  },
-  {
-    slug: "shouldersandbeyond",
-    name: "Shoulders & Beyond",
-    repo: "peureumen/mods",
-    tag: "snbreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
-    tagline: "Punchy! Moves' shoulder surfing camera standalone",
     about: "",
     features: [],
     screenshots: []
