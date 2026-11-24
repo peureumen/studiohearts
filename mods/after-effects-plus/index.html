@@ -25,23 +25,32 @@
 </header>
 <nav class="tabbar" aria-label="Main">
   <a href="../../#mods"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span>Mods</span></a>
-  <a href="../../#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Top</span></a>
+  <a href="../../#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 0 2 2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Top</span></a>
 </nav>
 <main class="page">
-  <div class="container stack-lg">
-    <a class="back-link" href="../../#mods">← Back to Mods</a>
+  <div class="container">
+    <a class="back-link" href="../../#mods">← Mods</a>
 
     <div class="product-layout mod-layout">
-      <section class="card product-media" aria-label="After Effects+ details">
-        <img class="product-hero" data-mod-hero src="" alt="" width="140" height="140">
+      <div class="card product-media">
+        <img class="product-hero" data-mod-hero src="" alt="After Effects+" width="140" height="140">
         <dl class="product-facts">
-          <div><dt>Game</dt><dd>26.3</dd></div>
-          <div><dt>Loader</dt><dd>Fabric</dd></div>
-          <div><dt>Latest release</dt><dd data-fact="version"><span class="skeleton fact-skeleton"></span></dd></div>
+          <div>
+            <dt>Game</dt>
+            <dd>26.3</dd>
+          </div>
+          <div>
+            <dt>Loader</dt>
+            <dd>Fabric</dd>
+          </div>
+          <div>
+            <dt>Latest release</dt>
+            <dd data-fact="version">Loading…</dd>
+          </div>
         </dl>
-      </section>
+      </div>
 
-      <aside class="card buy-card" aria-label="Download">
+      <aside class="card buy-card" aria-labelledby="product-name">
         <div class="buy-head">
           <img class="buy-icon" data-mod-icon src="" alt="" width="64" height="64">
           <div class="buy-title">
@@ -49,11 +58,11 @@
               <span class="badge badge-green">Free</span>
               <span class="badge">26.3 · Fabric</span>
             </div>
-            <h1 data-mod-name>After Effects+</h1>
+            <h1 id="product-name" data-mod-name>After Effects+</h1>
           </div>
         </div>
         <p class="buy-tagline muted" data-mod-tagline>A free Fabric mod for Minecraft 26.3.</p>
-        <a class="btn btn-primary btn-block" data-download href="#" aria-label="Download After Effects+">
+        <a class="btn btn-primary btn-block" data-download href="#">
           <span>Finding latest version…</span>
         </a>
         <p class="dl-meta" data-download-meta>Checking GitHub for the newest file.</p>
@@ -67,9 +76,9 @@
 
         <section class="card" data-section="features">
           <h2>Features</h2>
-          <ul class="feature-list">
+          <ul>
             <li>Built for Fabric</li>
-            <li>Designed for the listed Minecraft and Fabric environment.</li>
+            <li>Designed for Minecraft 26.3.</li>
             <li>Free download</li>
             <li>No checkout, payment, or purchase flow.</li>
           </ul>
@@ -79,8 +88,8 @@
           <h2>Installation</h2>
           <ol class="steps how-steps">
             <li><strong>Install Fabric</strong> Make sure Minecraft 26.3 with Fabric is installed.</li>
-            <li><strong>Download</strong> Use the download button above to get the latest .jar.</li>
-            <li><strong>Place the mod</strong> Put the downloaded .jar into your Minecraft <code>mods</code> folder.</li>
+            <li><strong>Download</strong> Use the button above to download the latest .jar.</li>
+            <li><strong>Place the mod</strong> Put the .jar in your Minecraft <code>mods</code> folder.</li>
           </ol>
         </section>
 
@@ -97,12 +106,11 @@
     </div>
   </div>
 </main>
-
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-about">
-        <a class="footer-brand" href="../../"><img src="../../carmenicon.png" alt="" width="28" height="28">Carmen</a>
+        <a class="footer-brand" href="../../"><img src="../../carmenicon.png" alt="" width="28" height="28" loading="lazy">Carmen</a>
         <p>Free Minecraft mods and projects.</p>
       </div>
       <nav class="footer-col" aria-label="Explore">
