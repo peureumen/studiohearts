@@ -27,7 +27,7 @@ const githubMods = [
     name: "After Effects+",
     repo: "peureumen/snb",
     tag: "afteffreleases",
-    thumbnail: null
+    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/aethmb.png"
   },
   {
     name: "ShouldersAndBeyond",
