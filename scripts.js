@@ -72,7 +72,7 @@ const githubMods = [
     repo: "peureumen/mods",
     tag: "snbreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
-    tagline: "Punchy! Moves' shoulder surfing camera standalone",
+    tagline: "Punchy! Moves' shoulder surfing camera-like!",
     about: "",
     features: [],
     screenshots: []
