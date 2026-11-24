@@ -47,7 +47,7 @@ const githubMods = [
   {
     slug: "after-effects-plus",
     name: "After Effects+",
-    repo: "peuremen/mods",
+    repo: "peureumen/mods",
     tag: "afteffreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
     tagline: "A free Fabric mod for Minecraft 26.3.",
