@@ -47,7 +47,7 @@ const githubMods = [
   {
     slug: "after-effects-plus",
     name: "After Effects+",
-    repo: "peureumen/mods",
+    repo: "peuremen/mods",
     tag: "afteffreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
     tagline: "A free Fabric mod for Minecraft 26.3.",
@@ -61,7 +61,7 @@ const githubMods = [
     repo: "peureumen/mods",
     tag: "snbreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
-    tagline: "Punchy! Moves' shoulder surfing camera standalone.",
+    tagline: "Punchy! Moves' shoulder surfing camera standalone",
     about: "",
     features: [],
     screenshots: []
@@ -144,7 +144,7 @@ function pickJar(release) {
 }
 
 
-// ---------- TOP: one wide horizontal card, generated from the same mod list ----------
+// ---------- HOME: Top card (Audify) ----------
 (function renderTopMod() {
   const host = document.getElementById("top-mod-card");
   if (!host) return;
@@ -155,26 +155,26 @@ function pickJar(release) {
   const card = el("div", "card top-mod-card");
 
   const artWrap = el("div", "top-mod-art-wrap");
-  const img = el("img", "top-mod-art");
-  img.src = mod.thumbnail || "";
-  img.alt = "";
-  img.width = 520;
-  img.height = 320;
-  img.loading = "eager";
-  img.decoding = "async";
-  img.addEventListener("error", () => {
-    artWrap.replaceChildren(el("div", "top-mod-art product-art-fallback", mod.name.charAt(0).toUpperCase()));
+  const image = el("img", "top-mod-art");
+  image.src = mod.thumbnail;
+  image.alt = "";
+  image.width = 520;
+  image.height = 320;
+  image.loading = "eager";
+  image.decoding = "async";
+  image.addEventListener("error", () => {
+    artWrap.replaceChildren(el("div", "product-art-fallback", mod.name.charAt(0)));
   });
-  artWrap.appendChild(img);
+  artWrap.appendChild(image);
 
   const body = el("div", "top-mod-body");
   const head = el("div", "top-mod-head");
-  const title = el("h3", "top-mod-name", mod.name);
-  const free = el("span", "badge badge-green top-mod-free", "Free");
-  head.append(title, free);
+  head.append(
+    el("h3", "top-mod-name", mod.name),
+    el("span", "badge badge-green", "Free")
+  );
 
   const line = el("p", "top-mod-line", mod.tagline);
-
   const facts = el("div", "top-mod-facts");
   facts.append(
     el("span", "product-compat", `${SITE.mc} · ${SITE.loader}`),
