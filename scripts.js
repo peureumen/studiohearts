@@ -39,7 +39,7 @@ const githubMods = [
     repo: "peureumen/snb",
     tag: "advcomreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/advthmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",          // TODO: write your own
+    tagline: "An unnoficial port of Advanced Compass",          // TODO: write your own
     about: "",                                                    // TODO: describe the mod
     features: [],                                                 // TODO: e.g. ["Feature one", "Feature two"]
     screenshots: []                                               // TODO: e.g. [{ src: "https://...", caption: "..." }]
@@ -49,8 +49,8 @@ const githubMods = [
     name: "After Effects+",
     repo: "peureumen/snb",
     tag: "afteffreleases",
-    thumbnail: null,
-    tagline: "A free Fabric mod for Minecraft 26.3.",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/aethmb.png",
+    tagline: "An unnoficial port of Combat Effects",
     about: "",
     features: [],
     screenshots: []
@@ -61,7 +61,7 @@ const githubMods = [
     repo: "peureumen/snb",
     tag: "snbreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/snbthmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",
+    tagline: "Punchy! Moves' shoulder surfing camera standalone",
     about: "",
     features: [],
     screenshots: []
