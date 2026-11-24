@@ -1,53 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Audify · StudioHearts</title>
-  <link rel="stylesheet" href="../../styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Audify · Carmen</title>
+<meta name="description" content="Audify · free Minecraft 26.3 Fabric mod.">
+<link rel="stylesheet" href="../../styles.css">
 </head>
-<body data-mod="audify">
-  <main class="container">
-    <div class="product-layout">
-      <section class="product-main">
-        <div class="card info-card">
-          <img class="mod-icon" src="https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png" alt="Audify icon">
-          <div class="facts">
-            <div class="fact"><span class="fact-label">Game</span><span class="fact-value">26.3</span></div>
-            <div class="fact"><span class="fact-label">Loader</span><span class="fact-value">Fabric</span></div>
-            <div class="fact"><span class="fact-label">Latest release</span><span class="fact-value">Audify 1.5.0</span></div>
-          </div>
-        </div>
-
-        <section class="card about-card">
-          <h2>About Audify</h2>
-          <p>Audify is a free Minecraft Fabric mod. Download the latest release directly from the official GitHub release page.</p>
-        </section>
-
-        <section class="card section">
-          <h2>Features</h2>
-          <div class="features">
-            <div class="feature"><strong>Fabric 26.3</strong><span>Built for Minecraft 26.3 on Fabric.</span></div>
-            <div class="feature"><strong>Free download</strong><span>No checkout, payment, or purchase flow.</span></div>
-            <div class="feature"><strong>Official release</strong><span>Downloads are provided through the official peureumen/mods GitHub release.</span></div>
-            <div class="feature"><strong>Latest: 1.5.0</strong><span>Current Audify release published on November 24, 2026.</span></div>
-          </div>
-        </section>
+<body class="has-tabbar mod-page" data-mod="audify">
+<main class="page">
+  <div class="container stack-lg">
+    <div class="product-layout mod-layout">
+      <section class="product-media card">
+        <img class="product-hero" data-mod-hero src="https://raw.githubusercontent.com/peuremen/mods/refs/heads/main/audifythmb.png" alt="Audify">
+        <dl class="product-facts">
+          <div><dt>Game</dt><dd>26.3</dd></div>
+          <div><dt>Loader</dt><dd>Fabric</dd></div>
+          <div><dt>Latest release</dt><dd data-fact="version">Audify 1.5.0</dd></div>
+        </dl>
       </section>
-
-      <aside class="product-side">
-        <div class="card hero-card">
-          <div class="badges">
-            <span class="badge free">Free</span>
-            <span class="badge">26.3 · Fabric</span>
+      <aside class="buy-card card">
+        <div class="buy-head">
+          <img class="buy-icon" data-mod-icon src="https://raw.githubusercontent.com/peuremen/mods/refs/heads/main/audifythmb.png" alt="Audify">
+          <div class="buy-title">
+            <div class="buy-chips"><span class="badge badge-green">Free</span><span class="badge">26.3 · Fabric</span></div>
+            <h1 data-mod-name>Audify</h1>
           </div>
-          <h1>Audify</h1>
-          <p class="tagline">Free audio mod for Minecraft 26.3 on Fabric.</p>
-          <a class="download-btn" href="https://github.com/peureumen/mods/releases/tag/audifyreleases" target="_blank" rel="noopener">⇩&nbsp; Download .jar</a>
-          <p class="download-meta">Audify 1.5.0 · GitHub Releases</p>
         </div>
+        <p class="buy-tagline" data-mod-tagline>Free audio mod for Minecraft 26.3 on Fabric.</p>
+        <a class="btn btn-primary btn-block" data-download href="https://github.com/peuremen/mods/releases/tag/audifyreleases">Download .jar</a>
+        <p class="dl-meta" data-download-meta>Audify 1.5.0 · GitHub Releases</p>
       </aside>
+      <section class="product-details">
+        <section class="card"><h2>About Audify</h2><div data-mod-about><p>A full description is coming soon.</p></div></section>
+        <section class="card" data-section="features"><h2>Features</h2><ul><li>Free download</li><li>Minecraft 26.3</li><li>Fabric</li><li>Official GitHub release</li></ul></section>
+        <section class="card"><h2>Download</h2><p>Audify is completely free. The Download .jar button uses the official GitHub release; there is no payment or checkout.</p></section>
+      </section>
     </div>
-  </main>
+  </div>
+</main>
+<script src="../../scripts.js"></script>
 </body>
 </html>
