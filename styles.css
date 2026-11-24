@@ -973,7 +973,15 @@ details.faq .answer { padding: 0px 0px 16px; color: var(--text-2); }
 .github-release-thumbnail {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
+  background: var(--surface-2);
+}
+.github-release-thumbnail.thumbnail-load-error {
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--surface-2);
 }
