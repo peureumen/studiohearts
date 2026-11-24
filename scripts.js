@@ -34,12 +34,23 @@ const SITE = {
 // ---------------------------------------------------------------------------
 const githubMods = [
   {
+  slug: "jcraft",
+  name: "JCraft",
+  repo: "peureumen/mods",
+  tag: "jcraftreleases",
+  thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/jcraftthmb.png",
+  tagline: "A free Visual/HUD mod for Minecraft 26.3.",
+  about: "",
+  features: [],
+  screenshots: []
+},
+  {
     slug: "advanced-compass",
     name: "Advanced Compass++",
     repo: "peureumen/mods",
     tag: "advcomreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/advthmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",
+    tagline: "Unofficial port of Advanced Compass to 26.3",
     about: "",
     features: [],
     screenshots: []
@@ -50,7 +61,18 @@ const githubMods = [
     repo: "peureumen/mods",
     tag: "afteffreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",
+    tagline: "Unofficial port of Combat Effects to 26.3",
+    about: "",
+    features: [],
+    screenshots: []
+  },
+  {
+    slug: "audify",
+    name: "Audify",
+    repo: "peureumen/mods",
+    tag: "audifyreleases",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
+    tagline: "A free Soundify mod for Minecraft 26.3.",
     about: "",
     features: [],
     screenshots: []
@@ -62,17 +84,6 @@ const githubMods = [
     tag: "snbreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
     tagline: "Punchy! Moves' shoulder surfing camera standalone",
-    about: "",
-    features: [],
-    screenshots: []
-  },
-  {
-    slug: "audify",
-    name: "Audify",
-    repo: "peureumen/mods",
-    tag: "audifyreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",
     about: "",
     features: [],
     screenshots: []
