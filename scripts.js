@@ -14,20 +14,98 @@
 
 // Per-mod GitHub Releases integration. Add one entry per mod and set its repo to
 // "GitHubOwner/RepositoryName". Each card loads its own latest release.
+
 const githubMods = [
   {
     name: "Advanced Compass++",
-    repo: "peureumen/advcomreleases"
+    repo: "YOUR_USERNAME/snb",
+    prefix: "advcom-"
   },
   {
     name: "After Effects+",
-    repo: "peureumen/affeffreleases"
+    repo: "YOUR_USERNAME/snb",
+    prefix: "affeff-"
   },
   {
     name: "ShouldersAndBeyond",
-    repo: "peureumen/snbreleases"
+    repo: "YOUR_USERNAME/snb",
+    prefix: "snb-"
   }
 ];
+
+async function loadGitHubReleases() {
+  for (const mod of githubMods) {
+    const container = document.querySelector(
+      `[data-mod="${mod.prefix}"]`
+    );
+
+    if (!container) continue;
+
+    try {
+      const response = await fetch(
+        `https://api.github.com/repos/${mod.repo}/releases`
+      );
+
+      if (!response.ok) throw new Error("Failed to fetch releases");
+
+      const releases = await response.json();
+
+      const modReleases = releases
+        .filter(release =>
+          release.tag_name.startsWith(mod.prefix)
+        )
+        .sort((a, b) =>
+          new Date(b.published_at) - new Date(a.published_at)
+        );
+
+      const latest = modReleases[0];
+
+      if (!latest) {
+        container.innerHTML = "<p>No releases available yet.</p>";
+        continue;
+      }
+
+      const jar = latest.assets.find(asset =>
+        asset.name.toLowerCase().endsWith(".jar")
+      );
+
+      container.innerHTML = `
+        <div class="github-release">
+          <span class="release-version">
+            ${latest.tag_name}
+          </span>
+
+          <p>
+            Released:
+            ${new Date(latest.published_at).toLocaleDateString()}
+          </p>
+
+          <div class="release-notes">
+            ${latest.body || "No release notes available."}
+          </div>
+
+          ${
+            jar
+              ? `<a href="${jar.browser_download_url}" download>
+                   Download .jar
+                 </a>`
+              : "<p>No JAR file attached.</p>"
+          }
+
+          <a href="${latest.html_url}" target="_blank" rel="noopener">
+            View Release
+          </a>
+        </div>
+      `;
+    } catch (error) {
+      console.error(`Error loading ${mod.name}:`, error);
+      container.innerHTML = "<p>Unable to load releases.</p>";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadGitHubReleases);
+
 
 (function loadModReleases(){
   const grid = document.querySelector("#mod-release-grid");
