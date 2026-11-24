@@ -19,7 +19,8 @@ const githubMods = [
     name: "Advanced Compass++",
     repo: "peureumen/snb",
     releaseTag: "advcomreleases",
-    description: "Advanced Compass++"
+    description: "Advanced Compass++",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/main/advthmb.png"
   },
   {
     name: "After Effects+",
@@ -31,7 +32,8 @@ const githubMods = [
     name: "ShouldersAndBeyond",
     repo: "peureumen/snb",
     releaseTag: "snbreleases",
-    description: "ShouldersAndBeyond"
+    description: "ShouldersAndBeyond",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/main/snbthmb.png"
   }
 ];
 
@@ -56,6 +58,16 @@ const githubMods = [
     card.className = "card product-card github-release-card";
     const body = document.createElement("div");
     body.className = "product-card-body";
+    if (mod.thumbnail) {
+      const thumbnail = document.createElement("img");
+      thumbnail.className = "github-release-thumbnail";
+      thumbnail.src = mod.thumbnail;
+      thumbnail.alt = `${mod.name} thumbnail`;
+      thumbnail.loading = "lazy";
+      thumbnail.decoding = "async";
+      thumbnail.addEventListener("error", () => thumbnail.remove(), { once: true });
+      card.append(thumbnail);
+    }
     const name = document.createElement("h3");
     name.className = "product-card-name";
     name.textContent = mod.name;

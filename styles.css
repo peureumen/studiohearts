@@ -968,3 +968,12 @@ details.faq .answer { padding: 0px 0px 16px; color: var(--text-2); }
   flex-wrap: wrap;
   gap: 0.55rem;
 }
+
+/* Mod thumbnails loaded from the shared GitHub repository */
+.github-release-thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
