@@ -38,18 +38,18 @@ const githubMods = [
     name: "Advanced Compass++",
     repo: "peureumen/mods",
     tag: "advcomreleases",
-    thumbnail: "https://raw.githubusercontent.com/peuremen/mods/refs/heads/main/advthmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",          // TODO: write your own
-    about: "",                                                    // TODO: describe the mod
-    features: [],                                                 // TODO: e.g. ["Feature one", "Feature two"]
-    screenshots: []                                               // TODO: e.g. [{ src: "https://...", caption: "..." }]
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/advthmb.png",
+    tagline: "A free Fabric mod for Minecraft 26.3.",
+    about: "",
+    features: [],
+    screenshots: []
   },
   {
     slug: "after-effects-plus",
     name: "After Effects+",
     repo: "peureumen/mods",
     tag: "afteffreleases",
-    thumbnail: null,
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
     tagline: "A free Fabric mod for Minecraft 26.3.",
     about: "",
     features: [],
@@ -60,8 +60,8 @@ const githubMods = [
     name: "Shoulders & Beyond",
     repo: "peureumen/mods",
     tag: "snbreleases",
-    thumbnail: "https://raw.githubusercontent.com/peuremen/mods/refs/heads/main/snbthmb.png",
-    tagline: "A free Fabric mod for Minecraft 26.3.",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
+    tagline: "Punchy! Moves' shoulder surfing camera standalone.",
     about: "",
     features: [],
     screenshots: []
@@ -69,15 +69,13 @@ const githubMods = [
   {
     slug: "audify",
     name: "Audify",
-    repo: "peuremen/mods",
+    repo: "peureumen/mods",
     tag: "audifyreleases",
-    thumbnail: "https://raw.githubusercontent.com/peuremen/mods/refs/heads/main/audifythmb.png",
-    tagline: "A Fabric audio mod for Minecraft 26.3.",
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
+    tagline: "A free Fabric mod for Minecraft 26.3.",
     about: "",
     features: [],
-    screenshots: [],
-    top: true,
-    releaseUrl: "https://github.com/peuremen/mods/releases/tag/audifyreleases"
+    screenshots: []
   }
 ];
 
@@ -145,54 +143,100 @@ function pickJar(release) {
   return jars.find(a => a.name.includes(SITE.mc)) || jars[0] || null;
 }
 
-// ---------- HOME: Top + Mods cards ----------
-function createModCard(mod) {
-  const card = el("a", "card product-card");
-  card.href = `mods/${mod.slug}/`;
 
-  const wrap = el("span", "product-art-wrap");
-  const showFallback = () => {
-    wrap.replaceChildren(el("span", "product-art product-art-fallback", mod.name.trim().charAt(0).toUpperCase()));
-  };
-  if (mod.thumbnail) {
-    const image = el("img", "product-art");
-    image.src = mod.thumbnail;
-    image.alt = "";
-    image.width = 320;
-    image.height = 320;
-    image.loading = "lazy";
-    image.decoding = "async";
-    image.addEventListener("error", showFallback);
-    wrap.appendChild(image);
-  } else {
-    showFallback();
-  }
+// ---------- TOP: one wide horizontal card, generated from the same mod list ----------
+(function renderTopMod() {
+  const host = document.getElementById("top-mod-card");
+  if (!host) return;
 
-  const body = el("div", "product-card-body");
-  body.append(
-    el("h3", "product-card-name", mod.name),
-    el("p", "product-card-line", mod.tagline)
-  );
-  const foot = el("div", "card-foot");
-  foot.append(
+  const mod = githubMods.find(m => m.slug === "audify");
+  if (!mod) return;
+
+  const card = el("div", "card top-mod-card");
+
+  const artWrap = el("div", "top-mod-art-wrap");
+  const img = el("img", "top-mod-art");
+  img.src = mod.thumbnail || "";
+  img.alt = "";
+  img.width = 520;
+  img.height = 320;
+  img.loading = "eager";
+  img.decoding = "async";
+  img.addEventListener("error", () => {
+    artWrap.replaceChildren(el("div", "top-mod-art product-art-fallback", mod.name.charAt(0).toUpperCase()));
+  });
+  artWrap.appendChild(img);
+
+  const body = el("div", "top-mod-body");
+  const head = el("div", "top-mod-head");
+  const title = el("h3", "top-mod-name", mod.name);
+  const free = el("span", "badge badge-green top-mod-free", "Free");
+  head.append(title, free);
+
+  const line = el("p", "top-mod-line", mod.tagline);
+
+  const facts = el("div", "top-mod-facts");
+  facts.append(
     el("span", "product-compat", `${SITE.mc} · ${SITE.loader}`),
-    el("span", "badge badge-green", "Free")
+    el("span", "badge", "Free download")
   );
-  body.appendChild(foot);
-  card.append(wrap, body);
-  return card;
-}
 
-(function renderTopCards() {
-  const grid = document.getElementById("top-mod-grid");
-  if (!grid) return;
-  githubMods.filter(mod => mod.top).forEach(mod => grid.appendChild(createModCard(mod)));
+  const actions = el("div", "top-mod-actions");
+  const details = el("a", "btn btn-secondary", "Details");
+  details.href = `mods/${mod.slug}/`;
+  const download = el("a", "btn btn-primary", "Download .jar");
+  download.href = `https://github.com/${mod.repo}/releases/tag/${mod.tag}`;
+  download.target = "_blank";
+  download.rel = "noopener noreferrer";
+  actions.append(details, download);
+
+  body.append(head, line, facts, actions);
+  card.append(artWrap, body);
+  host.replaceChildren(card);
 })();
 
+// ---------- HOME: mod cards that open each mod's page ----------
 (function renderModCards() {
   const grid = document.getElementById("mod-release-grid");
   if (!grid) return;
-  githubMods.filter(mod => !mod.top).forEach(mod => grid.appendChild(createModCard(mod)));
+
+  githubMods.forEach(mod => {
+    const card = el("a", "card product-card");
+    card.href = `mods/${mod.slug}/`;
+
+    const wrap = el("span", "product-art-wrap");
+    const showFallback = () => {
+      wrap.replaceChildren(el("span", "product-art product-art-fallback", mod.name.trim().charAt(0).toUpperCase()));
+    };
+    if (mod.thumbnail) {
+      const image = el("img", "product-art");
+      image.src = mod.thumbnail;
+      image.alt = "";
+      image.width = 320;
+      image.height = 320;
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", showFallback);
+      wrap.appendChild(image);
+    } else {
+      showFallback();
+    }
+
+    const body = el("div", "product-card-body");
+    body.append(
+      el("h3", "product-card-name", mod.name),
+      el("p", "product-card-line", mod.tagline)
+    );
+    const foot = el("div", "card-foot");
+    foot.append(
+      el("span", "product-compat", `${SITE.mc} · ${SITE.loader}`),
+      el("span", "badge badge-green", "Free")
+    );
+    body.appendChild(foot);
+
+    card.append(wrap, body);
+    grid.appendChild(card);
+  });
 })();
 
 // ---------- MOD PAGE: fill in details + direct download button ----------
