@@ -952,3 +952,19 @@ details.faq .answer { padding: 0px 0px 16px; color: var(--text-2); }
 .github-release-card { min-height: 0; }
 .github-release-notes { white-space: pre-line; overflow-wrap: anywhere; }
 .github-release-actions { flex-wrap: wrap; justify-content: flex-start; }
+
+/* GitHub release cards */
+.github-release-card .github-release-notes {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.github-release-card .github-release-hint {
+  display: block;
+  margin-top: 0.65rem;
+  opacity: 0.72;
+}
+.github-release-card .github-release-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
