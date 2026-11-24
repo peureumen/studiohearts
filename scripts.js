@@ -39,7 +39,7 @@ const githubMods = [
   repo: "peureumen/mods",
   tag: "jcraftreleases",
   thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/jcraftthmb.png",
-  tagline: "A free Visual/HUD mod for Minecraft 26.3.",
+  tagline: "A free VFX/HUD mod for Minecraft 26.3.",
   about: "",
   features: [],
   screenshots: []
@@ -50,7 +50,7 @@ const githubMods = [
     repo: "peureumen/mods",
     tag: "audifyreleases",
     thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/audifythmb.png",
-    tagline: "A free Soundify mod for Minecraft 26.3.",
+    tagline: "A free SFX mod for Minecraft 26.3.",
     about: "",
     features: [],
     screenshots: []
