@@ -15,7 +15,18 @@
 // Per-mod GitHub Releases integration. Add one entry per mod and set its repo to
 // "GitHubOwner/RepositoryName". Each card loads its own latest release.
 const githubMods = [
-  // Example: { name: "My Mod", repo: "Carmen/MyMod", description: "A short mod description." }
+  {
+    name: "Advanced Compass++",
+    repo: "peureumen/advcomreleases"
+  },
+  {
+    name: "After Effects+",
+    repo: "peureumen/affeffreleases"
+  },
+  {
+    name: "ShouldersAndBeyond",
+    repo: "peureumen/snbreleases"
+  }
 ];
 
 (function loadModReleases(){
