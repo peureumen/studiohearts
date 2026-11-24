@@ -985,3 +985,17 @@ details.faq .answer { padding: 0px 0px 16px; color: var(--text-2); }
   object-fit: contain;
   background: var(--surface-2);
 }
+
+/* ===== Free Fabric 26.3 mods: cards on the home page + mod pages ===== */
+.product-art-fallback { display: grid; place-items: center; color: var(--muted); font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; }
+.product-card .card-foot { justify-content: flex-start; flex-wrap: wrap; gap: 6px; }
+.product-card .product-card-line { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.product-details { display: flex; flex-direction: column; gap: 16px; }
+.version-pick { display: flex; flex-direction: column; gap: 10px; }
+.version-pick .row { gap: 8px; }
+.version-pick .btn { flex: 1 1 auto; }
+.dl-meta { margin: 0; text-align: center; font-size: 0.875rem; color: var(--muted); }
+.mod-note { margin: 0; font-size: 0.95rem; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--info-soft); color: var(--text-2); }
+.product-media:has(.product-hero[hidden]) { padding-top: 20px; padding-bottom: 20px; }
+@media (max-width: 899px) { .mod-layout .product-media { padding: 16px 20px; } }
