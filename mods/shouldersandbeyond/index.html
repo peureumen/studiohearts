@@ -3,20 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Carmen · Mod</title>
-  <meta name="description" content="Carmen Minecraft mod page.">
+  <title>ShouldersAndBeyond · Carmen</title>
+  <meta name="description" content="ShouldersAndBeyond: Minecraft mod for Fabric 26.3.">
   <meta name="theme-color" content="#192025">
   <link rel="icon" type="image/png" href="../../carmenicon.png">
   <link rel="stylesheet" href="../../styles.css">
 </head>
 <body data-mod="shouldersandbeyond">
-  <div class="sale-bar" role="note">
-    <div class="sale-bar-inner">
-      <span class="sale-pill">Free</span>
-      <span class="sale-bar-msg"><b>Everything is free.</b> Explore Carmen's Minecraft projects.</span>
-    </div>
-  </div>
-
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="../../"><img src="../../nav-icon.png" alt="" width="34" height="34">Carmen</a>
@@ -34,48 +27,70 @@
     <div class="container stack-lg">
       <p><a href="../../#mods">← Back to mods</a></p>
 
-      <section class="mod-layout" aria-labelledby="mod-title">
-        <div class="product-media">
-          <img class="product-hero" data-mod-hero src="" alt="" width="640" height="360" fetchpriority="high">
+      <section class="product-layout mod-layout" aria-labelledby="mod-title">
+        <div class="product-media card">
+          <img class="product-hero" data-mod-hero src="" alt="" width="320" height="320" fetchpriority="high">
+          <dl class="product-facts">
+            <div><dt>Game</dt><dd data-fact="versions">26.3</dd></div>
+            <div><dt>Loader</dt><dd data-fact="loader">Fabric</dd></div>
+            <div><dt>Latest release</dt><dd data-fact="version">Checking…</dd></div>
+          </dl>
         </div>
 
-        <aside class="product-details" aria-label="Mod details">
-          <img data-mod-icon class="product-icon" src="" alt="" width="140" height="140" loading="eager">
-          <div>
-            <p class="badge badge-green">Free · Fabric 26.3</p>
-            <h1 id="mod-title" data-mod-name>Mod</h1>
-            <p data-mod-tagline class="lead"></p>
+        <aside class="buy-card card" aria-labelledby="mod-title">
+          <div class="buy-head">
+            <img data-mod-icon class="buy-icon" src="" alt="" width="64" height="64" loading="eager">
+            <div class="buy-title">
+              <span class="buy-chips"><span class="badge badge-green">Free</span><span class="product-compat">26.3 · Fabric</span></span>
+              <h1 id="mod-title" data-mod-name>Mod</h1>
+            </div>
           </div>
-          <div class="card card-tight">
-            <dl class="facts">
-              <div><dt>Game</dt><dd data-fact="versions">26.3</dd></div>
-              <div><dt>Loader</dt><dd data-fact="loader">Fabric</dd></div>
-              <div><dt>Latest release</dt><dd data-fact="version">Checking…</dd></div>
-            </dl>
-          </div>
-          <div class="card card-tight">
+          <p data-mod-tagline class="muted buy-tagline"></p>
+          <div class="stack-sm">
             <a class="btn btn-primary btn-block" data-download href="#">Finding latest version…</a>
             <p class="dl-meta" data-download-meta>Checking GitHub for the newest file.</p>
           </div>
         </aside>
 
-        <section class="card" aria-labelledby="about-title">
-          <h2 id="about-title">About</h2>
-          <div data-mod-about></div>
-        </section>
+        <div class="product-details stack">
+          <section class="card" aria-labelledby="about-title">
+            <h2 id="about-title">About <span data-mod-name>this mod</span></h2>
+            <div data-mod-about></div>
+          </section>
 
-        <section class="card" data-section="features" aria-labelledby="features-title">
-          <h2 id="features-title">Features</h2>
-          <ul></ul>
-        </section>
+          <section class="card" data-section="features" aria-labelledby="features-title">
+            <h2 id="features-title">Features</h2>
+            <ul class="feature-list"></ul>
+          </section>
 
-        <section class="card" data-section="shots" aria-labelledby="shots-title">
-          <div class="section-heading">
-            <h2 id="shots-title">Screenshots</h2>
-            <span data-shot-count>0 images</span>
-          </div>
-          <div class="shot-strip" data-mod-shots></div>
-        </section>
+          <section class="card" data-section="shots" aria-labelledby="shots-title">
+            <div class="card-head">
+              <h2 id="shots-title">Screenshots</h2>
+              <span class="muted small" data-shot-count>0 images</span>
+            </div>
+            <div class="shot-strip" data-mod-shots></div>
+          </section>
+
+          <section class="card" aria-labelledby="versions-title">
+            <h2 id="versions-title">Versions</h2>
+            <dl class="loader-list">
+              <div><dt>Minecraft</dt><dd>26.3</dd></div>
+              <div><dt>Loader</dt><dd>Fabric</dd></div>
+            </dl>
+            <p class="small muted">The download button above always points to the newest published compatible release found on GitHub.</p>
+          </section>
+
+          <section class="card" aria-labelledby="install-title">
+            <h2 id="install-title">Install</h2>
+            <ol class="steps">
+              <li>Install Fabric Loader for Minecraft 26.3.</li>
+              <li>Download the latest <strong>.jar</strong> using the button above.</li>
+              <li>Place the downloaded file in your Minecraft <code>mods</code> folder.</li>
+              <li>Launch Minecraft with the Fabric profile.</li>
+            </ol>
+            <p class="install-more"><a href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener noreferrer">Fabric installer</a></p>
+          </section>
+        </div>
       </section>
     </div>
   </main>
