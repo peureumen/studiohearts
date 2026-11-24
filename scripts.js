@@ -12,112 +12,32 @@
 })();
 
 
-// Per-mod GitHub Releases integration. Add one entry per mod and set its repo to
-// "GitHubOwner/RepositoryName". Each card loads its own latest release.
-
+// Per-mod GitHub Releases integration.
+// All three mods live in peureumen/snb. Each mod is identified by its release-tag prefix.
 const githubMods = [
   {
     name: "Advanced Compass++",
-    repo: "YOUR_USERNAME/snb",
-    prefix: "advcom-"
+    repo: "peureumen/snb",
+    tagPrefix: "advcomreleases",
+    description: "Advanced Compass++"
   },
   {
     name: "After Effects+",
-    repo: "YOUR_USERNAME/snb",
-    prefix: "affeff-"
+    repo: "peureumen/snb",
+    tagPrefix: "afteffreleases",
+    description: "After Effects+"
   },
   {
     name: "ShouldersAndBeyond",
-    repo: "YOUR_USERNAME/snb",
-    prefix: "snb-"
+    repo: "peureumen/snb",
+    tagPrefix: "snbreleases",
+    description: "ShouldersAndBeyond"
   }
 ];
-
-async function loadGitHubReleases() {
-  for (const mod of githubMods) {
-    const container = document.querySelector(
-      `[data-mod="${mod.prefix}"]`
-    );
-
-    if (!container) continue;
-
-    try {
-      const response = await fetch(
-        `https://api.github.com/repos/${mod.repo}/releases`
-      );
-
-      if (!response.ok) throw new Error("Failed to fetch releases");
-
-      const releases = await response.json();
-
-      const modReleases = releases
-        .filter(release =>
-          release.tag_name.startsWith(mod.prefix)
-        )
-        .sort((a, b) =>
-          new Date(b.published_at) - new Date(a.published_at)
-        );
-
-      const latest = modReleases[0];
-
-      if (!latest) {
-        container.innerHTML = "<p>No releases available yet.</p>";
-        continue;
-      }
-
-      const jar = latest.assets.find(asset =>
-        asset.name.toLowerCase().endsWith(".jar")
-      );
-
-      container.innerHTML = `
-        <div class="github-release">
-          <span class="release-version">
-            ${latest.tag_name}
-          </span>
-
-          <p>
-            Released:
-            ${new Date(latest.published_at).toLocaleDateString()}
-          </p>
-
-          <div class="release-notes">
-            ${latest.body || "No release notes available."}
-          </div>
-
-          ${
-            jar
-              ? `<a href="${jar.browser_download_url}" download>
-                   Download .jar
-                 </a>`
-              : "<p>No JAR file attached.</p>"
-          }
-
-          <a href="${latest.html_url}" target="_blank" rel="noopener">
-            View Release
-          </a>
-        </div>
-      `;
-    } catch (error) {
-      console.error(`Error loading ${mod.name}:`, error);
-      container.innerHTML = "<p>Unable to load releases.</p>";
-    }
-  }
-}
-
-document.addEventListener("DOMContentLoaded", loadGitHubReleases);
-
 
 (function loadModReleases(){
   const grid = document.querySelector("#mod-release-grid");
   if (!grid) return;
-
-  if (!githubMods.length) {
-    const empty = document.createElement("p");
-    empty.className = "product-card-line";
-    empty.textContent = "Add each mod's GitHub repository in the githubMods list in scripts.js to show its latest release here.";
-    grid.append(empty);
-    return;
-  }
 
   const makeLink = (label, href, className) => {
     const link = document.createElement("a");
@@ -152,23 +72,39 @@ document.addEventListener("DOMContentLoaded", loadGitHubReleases);
     grid.append(card);
 
     const repoUrl = `https://github.com/${mod.repo}`;
-    fetch(`https://api.github.com/repos/${encodeURIComponent(mod.repo.split("/")[0])}/${encodeURIComponent(mod.repo.split("/")[1])}/releases/latest`)
+    const releasesUrl = `${repoUrl}/releases`;
+    const [owner, repository] = mod.repo.split("/");
+
+    fetch(`https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repository)}/releases?per_page=100`)
       .then(response => {
-        if (!response.ok) throw new Error(response.status === 404 ? "No releases found (check the repository name)." : "GitHub release unavailable.");
+        if (!response.ok) throw new Error("GitHub releases could not be loaded.");
         return response.json();
       })
-      .then(release => {
-        version.textContent = `${release.tag_name || release.name || "Latest"}${release.published_at ? " · " + new Date(release.published_at).toLocaleDateString() : ""}`;
-        notes.textContent = (release.body || "No release notes.").trim().slice(0, 240);
-        foot.append(makeLink("View release", release.html_url, "btn btn-secondary"));
-        const asset = (release.assets || []).find(a => a.name.toLowerCase().endsWith(".jar"));
+      .then(releases => {
+        const matchingReleases = releases
+          .filter(release => !release.draft && !release.prerelease &&
+            (release.tag_name || "").toLowerCase().startsWith(mod.tagPrefix.toLowerCase()))
+          .sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
+
+        const latest = matchingReleases[0];
+        if (!latest) {
+          version.textContent = "No published release found for this mod.";
+          notes.textContent = `Expected a release tag beginning with: ${mod.tagPrefix}`;
+          foot.append(makeLink("View repository releases", releasesUrl, "btn btn-primary"));
+          return;
+        }
+
+        version.textContent = `${latest.tag_name || latest.name || "Latest"}${latest.published_at ? " · " + new Date(latest.published_at).toLocaleDateString() : ""}`;
+        notes.textContent = (latest.body || "No release notes provided.").trim().slice(0, 500);
+        foot.append(makeLink("View release", latest.html_url, "btn btn-secondary"));
+        const asset = (latest.assets || []).find(item => item.name.toLowerCase().endsWith(".jar"));
         if (asset) foot.append(makeLink("Download .jar", asset.browser_download_url, "btn btn-primary"));
-        else foot.append(makeLink("Downloads", repoUrl + "/releases", "btn btn-primary"));
+        else foot.append(makeLink("All releases", releasesUrl, "btn btn-primary"));
       })
       .catch(error => {
         version.textContent = error.message || "Could not load release.";
-        foot.append(makeLink("GitHub", repoUrl, "btn btn-secondary"));
-        foot.append(makeLink("All releases", repoUrl + "/releases", "btn btn-primary"));
+        foot.append(makeLink("GitHub repository", repoUrl, "btn btn-secondary"));
+        foot.append(makeLink("All releases", releasesUrl, "btn btn-primary"));
       });
   });
 })();
