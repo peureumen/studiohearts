@@ -1,116 +1,1626 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Carmen · Minecraft Mods</title>
-<meta name="description" content="A collection of free Minecraft mods and projects by Carmen.">
-<meta name="theme-color" content="#192025">
-<meta name="color-scheme" content="light dark">
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soundify — StudioHearts</title>
+    <style>
+        .style-0 {
+            cursor: auto;
+            margin: 0px;
+            min-height: 609px;
+            display: flex;
+            flex-direction: column;
+            background: rgb(25, 32, 37) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(242, 245, 247);
+            font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 24.8px;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
 
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Carmen">
-<meta property="og:url" content="https://gduck.site/">
-<meta property="og:title" content="Carmen · Minecraft Mods">
-<meta property="og:description" content="A collection of free Minecraft mods and projects by Carmen.">
-<meta property="og:image" content="carmenicon.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" href="carmenicon.png">
+        .style-1 {
+            background: rgb(32, 58, 25) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(238, 246, 230);
+            font-size: 15.64px;
+            line-height: 21.114px;
+            box-sizing: border-box;
+        }
 
-<link rel="apple-touch-icon" href="carmenicon.png">
+        .style-2 {
+            max-width: 1080px;
+            margin: 0px auto;
+            padding: 9px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 6px 12px;
+            text-align: center;
+            box-sizing: border-box;
+        }
 
+        .style-3 {
+            display: flex;
+            align-items: center;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: rgb(196, 240, 106) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(23, 60, 9);
+            font-size: 12.58px;
+            font-weight: 700;
+            letter-spacing: 0.629px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
 
-<link rel="stylesheet" href="styles.css"></head>
-<body class="has-tabbar" cz-shortcut-listen="true"><div class="sale-bar" role="note"><div class="sale-bar-inner"><span class="sale-pill">Free</span><span class="sale-bar-msg"><b>Everything is free.</b> Explore Carmen’s Minecraft projects.</span></div></div>
-<!-- chrome: written by scripts/site-chrome.mjs -->
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="/"><img src="nav-icon.png" alt="" width="34" height="34">Carmen</a>
-    <nav class="nav" aria-label="Main">
-      <a href="#mods" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>Mods</a>
-      <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>Top</a>
+        .style-4 {
+            box-sizing: border-box;
+        }
+
+        .style-5 {
+            color: rgb(196, 240, 106);
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-6 {
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .style-7 {
+            color: rgb(238, 246, 230);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-8 {
+            color: rgb(196, 240, 106);
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-9 {
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .style-10 {
+            color: rgb(196, 240, 106);
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-11 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            font-size: 14.45px;
+            box-sizing: border-box;
+        }
+
+        .style-12 {
+            color: rgb(185, 201, 173);
+            box-sizing: border-box;
+        }
+
+        .style-13 {
+            display: flex;
+            gap: 3px;
+            box-sizing: border-box;
+        }
+
+        .style-14 {
+            min-width: 36.125px;
+            padding: 2px 5px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.14) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .style-15 {
+            min-width: 36.125px;
+            padding: 2px 5px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.14) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .style-16 {
+            min-width: 36.125px;
+            padding: 2px 5px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.14) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .style-17 {
+            position: sticky;
+            top: 0px;
+            z-index: 50;
+            background: rgb(25, 32, 37) none repeat scroll 0% 0% / auto padding-box border-box;
+            box-sizing: border-box;
+        }
+
+        .style-18 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 60px;
+            width: 100%;
+            max-width: 1080px;
+            margin: 0px auto;
+            padding: 0px 16px;
+            box-sizing: border-box;
+        }
+
+        .style-19 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: auto;
+            font-weight: 700;
+            font-size: 18.7px;
+            letter-spacing: -0.187px;
+            text-decoration: none;
+            color: rgb(242, 245, 247);
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-20 {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-21 {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-22 {
+            color: rgb(242, 245, 247);
+            background: rgb(59, 85, 102) none repeat scroll 0% 0% / auto padding-box border-box;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 36px;
+            padding: 0px 12px;
+            border-radius: 999px;
+            font-size: 16.15px;
+            font-weight: 600;
+            text-decoration: none;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-23 {
+            width: 17px;
+            height: 17px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-24, .style-25, .style-26, .style-29, .style-30, .style-31, .style-34, .style-35, .style-36, .style-40, .style-43, .style-44, .style-50, .style-51, .style-52, .style-56, .style-57, .style-58, .style-62, .style-63, .style-64, .style-68, .style-69, .style-75, .style-266, .style-275 {
+            box-sizing: border-box;
+        }
+
+        .style-27 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 36px;
+            padding: 0px 12px;
+            border-radius: 999px;
+            font-size: 16.15px;
+            font-weight: 600;
+            text-decoration: none;
+            color: rgb(163, 178, 188);
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-28 {
+            width: 17px;
+            height: 17px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-32 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 36px;
+            padding: 0px 12px;
+            border-radius: 999px;
+            font-size: 16.15px;
+            font-weight: 600;
+            text-decoration: none;
+            color: rgb(163, 178, 188);
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-33 {
+            width: 17px;
+            height: 17px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-37 {
+            display: grid;
+            place-items: center;
+            flex: 0 0 auto;
+            width: 38px;
+            height: 38px;
+            padding: 0px;
+            border: 0px none rgb(242, 245, 247);
+            border-radius: 50%;
+            background: transparent;
+            color: rgb(242, 245, 247);
+            cursor: pointer;
+            font: 16px / 24.8px 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .style-38 {
+            display: none;
+            box-sizing: border-box;
+        }
+
+        .style-39, .style-42 {
+            width: 20px;
+            height: 20px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-41 {
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .style-45 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 40px;
+            justify-content: flex-end;
+            box-sizing: border-box;
+        }
+
+        .style-46 {
+            min-height: 36px;
+            padding: 0px 16px;
+            font-size: 15.3px;
+            background: rgb(244, 241, 236) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(25, 32, 37);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 999px;
+            font-weight: 700;
+            line-height: 18.36px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-47 {
+            display: none;
+            box-sizing: border-box;
+        }
+
+        .style-48, .style-54, .style-60, .style-66 {
+            color: rgb(242, 245, 247);
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-49, .style-55, .style-61, .style-67, .style-74 {
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-71 {
+            padding: 28px 0px 56px;
+            flex: 1 0 auto;
+            box-sizing: border-box;
+        }
+
+        .style-72 {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0px auto;
+            padding: 0px 16px;
+            box-sizing: border-box;
+        }
+
+        .style-73 {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            min-height: 44px;
+            margin: -12px 0px 4px -6px;
+            padding: 0px 6px;
+            color: rgb(163, 178, 188);
+            font-weight: 600;
+            text-decoration: none;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-76 {
+            grid-template: 'media buy' 'details buy' 1fr / minmax(0px, 1fr) 380px;
+            column-gap: 28px;
+            align-items: start;
+            display: grid;
+            gap: 20px 28px;
+            grid-template-columns: minmax(0px, 1fr) 380px;
+            grid-template-areas: 'media buy' 'details buy';
+            box-sizing: border-box;
+        }
+
+        .style-77 {
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            grid-area: media;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        .style-78 {
+            width: 140px;
+            height: 140px;
+            flex: 0 0 auto;
+            border-radius: 18px;
+            object-fit: cover;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-79 {
+            flex: 1 1 0%;
+            min-width: 0px;
+            margin: 0px;
+            display: grid;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .style-80, .style-83, .style-86 {
+            display: grid;
+            grid-template-columns: 88px minmax(0px, 1fr);
+            gap: 12px;
+            align-items: baseline;
+            box-sizing: border-box;
+        }
+
+        .style-81, .style-84, .style-87 {
+            color: rgb(163, 178, 188);
+            font-size: 15.64px;
+            box-sizing: border-box;
+        }
+
+        .style-82, .style-85, .style-88 {
+            margin: 0px;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+            box-sizing: border-box;
+        }
+
+        .style-89 {
+            padding: 24px;
+            grid-area: buy;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        .style-90 {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-sizing: border-box;
+        }
+
+        .style-91 {
+            display: none;
+            width: 64px;
+            height: 64px;
+            flex: 0 0 auto;
+            border-radius: 14px;
+            object-fit: cover;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-92 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+            min-width: 0px;
+            box-sizing: border-box;
+        }
+
+        .style-93 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            box-sizing: border-box;
+        }
+
+        .style-94 {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            padding: 2px 9px;
+            border-radius: 999px;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgb(58, 77, 89);
+            font-size: 13.26px;
+            font-weight: 600;
+            color: rgb(211, 220, 225);
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .style-95 {
+            display: flex;
+            align-items: center;
+            padding: 2px 9px;
+            border-radius: 999px;
+            background: rgb(196, 240, 106) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(23, 60, 9);
+            font-size: 13.26px;
+            font-weight: 700;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .style-96 {
+            margin: 0px;
+            font-size: 34px;
+            line-height: 40.8px;
+            font-weight: 700;
+            letter-spacing: -0.34px;
+            box-sizing: border-box;
+        }
+
+        .style-97 {
+            margin: -6px 0px 0px;
+            color: rgb(163, 178, 188);
+            box-sizing: border-box;
+        }
+
+        .style-98 {
+            margin: 0px;
+            font-size: 15.64px;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: rgb(42, 65, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            box-sizing: border-box;
+        }
+
+        .style-99 {
+            font-weight: 600;
+            white-space: nowrap;
+            color: rgb(242, 245, 247);
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-100 {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-sizing: border-box;
+        }
+
+        .style-128 {
+            padding: 14px;
+            border-radius: 12px;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .style-129, .style-145 {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            box-sizing: border-box;
+        }
+
+        .style-130, .style-146 {
+            font-size: 15.3px;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+
+        .style-131, .style-147 {
+            appearance: none;
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 40px 12px 14px;
+            background: rgb(34, 48, 58) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a3b2bc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat scroll calc(100% - 12px) 50% / auto padding-box border-box;
+            border: 1px solid rgb(76, 109, 128);
+            border-radius: 12px;
+            font-size: 17px;
+            color: rgb(242, 245, 247);
+            box-sizing: border-box;
+        }
+
+        .style-150 {
+            margin: 0px;
+            font-size: 14.875px;
+            color: rgb(163, 178, 188);
+            box-sizing: border-box;
+        }
+
+        .download-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .style-152 {
+            display: flex;
+            width: 100%;
+            background: rgb(244, 241, 236) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(25, 32, 37);
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+            padding: 0px 22px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 20.4px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+            box-sizing: border-box;
+        }
+
+        .style-152:hover {
+            background: rgb(226, 222, 214);
+        }
+
+        .secondary-btn {
+            display: flex;
+            width: 100%;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(242, 245, 247);
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 46px;
+            padding: 0px 20px;
+            border: 1px solid rgb(76, 109, 128);
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 15.64px;
+            line-height: 19px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+            box-sizing: border-box;
+        }
+
+        .secondary-btn:hover {
+            background: rgb(58, 81, 96);
+        }
+
+        .style-153 {
+            margin: 0px;
+            text-align: center;
+            font-size: 14.875px;
+            color: rgb(163, 178, 188);
+            box-sizing: border-box;
+        }
+
+        .style-154 {
+            display: block;
+            color: rgb(211, 220, 225);
+            font-size: 15.3px;
+            line-height: 22.185px;
+            text-decoration: none;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: rgb(42, 65, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-155 {
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-159 {
+            color: rgb(168, 236, 128);
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-160 {
+            grid-area: details;
+            min-width: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-sizing: border-box;
+        }
+
+        .style-161, .style-186, .style-195, .style-209 {
+            padding: 24px;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        .style-162 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .style-163, .style-187, .style-196, .style-210 {
+            margin: 0px 0px 8px;
+            font-size: 22.95px;
+            line-height: 27.54px;
+            font-weight: 700;
+            letter-spacing: -0.2295px;
+            box-sizing: border-box;
+        }
+
+        .style-163 {
+            margin-bottom: 0px;
+        }
+
+        .style-164 {
+            font-size: 14.875px;
+            color: rgb(163, 178, 188);
+            box-sizing: border-box;
+        }
+
+        .style-165 {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 6px;
+            box-sizing: border-box;
+        }
+
+        .style-166, .style-170, .style-174, .style-178, .style-182 {
+            width: 340px;
+            flex: 0 0 auto;
+            margin: 0px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            box-sizing: border-box;
+        }
+
+        .style-167, .style-171, .style-175, .style-179, .style-183 {
+            display: block;
+            width: 100%;
+            padding: 0px;
+            border: 1px solid rgb(58, 77, 89);
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            cursor: zoom-in;
+            font: 16px / 24.8px 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: rgb(242, 245, 247);
+            box-sizing: border-box;
+        }
+
+        .style-168, .style-172, .style-176, .style-180, .style-184 {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            transition: transform 0.2s;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-169, .style-173, .style-177, .style-181, .style-185 {
+            font-size: 14.45px;
+            line-height: 19.5075px;
+            color: rgb(163, 178, 188);
+            box-sizing: border-box;
+        }
+
+        .style-188 {
+            margin: 0px 0px 16px;
+            box-sizing: border-box;
+        }
+
+        .style-189, .style-217 {
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-size: 18.7px;
+            line-height: 22.44px;
+            font-weight: 700;
+            letter-spacing: -0.187px;
+            box-sizing: border-box;
+        }
+
+        .style-190 {
+            margin: 0px 0px 4px;
+            padding-left: 19.2px;
+            box-sizing: border-box;
+        }
+
+        .style-191, .style-192, .style-193, .style-194 {
+            box-sizing: border-box;
+        }
+
+        .style-192, .style-193, .style-194 {
+            margin-top: 6px;
+        }
+
+        .style-197 {
+            box-sizing: border-box;
+        }
+
+        .style-198 {
+            display: grid;
+            gap: 8px;
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+        }
+
+        .style-199, .style-202, .style-205 {
+            display: grid;
+            grid-template-columns: 96px minmax(0px, 1fr);
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            box-sizing: border-box;
+        }
+
+        .style-200, .style-203, .style-206 {
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+
+        .style-201, .style-204, .style-207 {
+            margin: 0px;
+            overflow-wrap: anywhere;
+            box-sizing: border-box;
+        }
+
+        .style-208 {
+            font-size: 14.875px;
+            color: rgb(163, 178, 188);
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .style-211 {
+            margin-bottom: 12px;
+            counter-reset: step 0;
+            list-style: outside none none;
+            padding: 0px;
+            display: grid;
+            gap: 12px;
+            box-sizing: border-box;
+        }
+
+        .style-212, .style-213, .style-214 {
+            counter-increment: step 1;
+            position: relative;
+            padding-left: 40px;
+            box-sizing: border-box;
+        }
+
+        .style-212::before, .style-213::before, .style-214::before {
+            content: counter(step);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            background: rgb(50, 70, 83);
+            border: 1px solid rgb(76, 109, 128);
+            color: rgb(242, 245, 247);
+            font-size: 13.5px;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+        }
+
+        .style-215 {
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        .style-216, .style-219, .style-220 {
+            color: rgb(242, 245, 247);
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-218 {
+            margin-bottom: 0px;
+            box-sizing: border-box;
+        }
+
+        .style-221 {
+            box-sizing: border-box;
+        }
+
+        .style-222 {
+            margin-top: auto;
+            padding: 36px 0px 24px;
+            border-top: 1px solid rgb(58, 77, 89);
+            color: rgb(163, 178, 188);
+            font-size: 15.3px;
+            box-sizing: border-box;
+        }
+
+        .style-223 {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0px auto;
+            padding: 0px 16px;
+            box-sizing: border-box;
+        }
+
+        .style-224 {
+            display: grid;
+            grid-template-columns: minmax(200px, 1.4fr) repeat(4, minmax(120px, 1fr));
+            gap: 24px;
+            box-sizing: border-box;
+        }
+
+        .style-225 {
+            box-sizing: border-box;
+        }
+
+        .style-226 {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgb(242, 245, 247);
+            font-weight: 700;
+            font-size: 17.85px;
+            text-decoration: none;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-227 {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-228 {
+            margin: 8px 0px 0px;
+            max-width: 240px;
+            box-sizing: border-box;
+        }
+
+        .style-229, .style-235, .style-241, .style-246 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        .style-230, .style-236, .style-242, .style-247 {
+            margin: 4px 0px 8px;
+            color: rgb(242, 245, 247);
+            font-size: 13.26px;
+            font-weight: 700;
+            letter-spacing: 0.7956px;
+            text-transform: uppercase;
+            line-height: 15.912px;
+            box-sizing: border-box;
+        }
+
+        .style-231, .style-232, .style-233, .style-234,
+        .style-237, .style-238, .style-239, .style-240,
+        .style-243, .style-244, .style-245,
+        .style-248, .style-249, .style-250 {
+            padding: 4px 0px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            color: rgb(163, 178, 188);
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+        }
+
+        .style-251 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 6px 24px;
+            margin-top: 28px;
+            padding-top: 16px;
+            border-top: 1px solid rgb(58, 77, 89);
+            font-size: 12.75px;
+            box-sizing: border-box;
+        }
+
+        .style-252, .style-253, .style-254 {
+            box-sizing: border-box;
+        }
+
+        .style-255 {
+            width: min(-24px + 100vw, 1100px);
+            max-width: none;
+            max-height: none;
+            padding: 0px;
+            border: 0px none rgb(255, 255, 255);
+            border-radius: 20px;
+            background: rgb(17, 17, 17) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .style-256 {
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .style-257 {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 469px;
+            object-fit: contain;
+            background: rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .style-258 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            box-sizing: border-box;
+        }
+
+        .style-259, .style-261 {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 auto;
+            border: 0px none rgb(255, 255, 255);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(255, 255, 255);
+            font-size: 27.2px;
+            line-height: 27.2px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .style-260 {
+            flex: 1 1 0%;
+            margin: 0px;
+            text-align: center;
+            font-size: 16.15px;
+            color: rgb(232, 228, 223);
+            box-sizing: border-box;
+        }
+
+        .style-262 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.55) none repeat scroll 0% 0% / auto padding-box border-box;
+            width: 44px;
+            height: 44px;
+            flex: 0 0 auto;
+            border: 0px none rgb(255, 255, 255);
+            border-radius: 50%;
+            color: rgb(255, 255, 255);
+            font-size: 27.2px;
+            line-height: 27.2px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .style-263 {
+            box-sizing: border-box;
+        }
+
+        .style-264 {
+            font: 16px / 24.8px 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: rgb(25, 32, 37);
+            box-sizing: border-box;
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            padding: 0px;
+            border: 0px none rgb(25, 32, 37);
+            border-radius: 50%;
+            background: rgb(244, 241, 236) none repeat scroll 0% 0% / auto padding-box border-box;
+            box-shadow: rgba(31, 31, 31, 0.22) 0px 6px 20px 0px;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.2s, opacity 0.2s;
+        }
+
+        .style-265 {
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+            width: 24px;
+            height: 24px;
+        }
+
+        .style-267 {
+            display: none;
+            box-sizing: border-box;
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 10000;
+            flex-direction: column;
+            width: min(380px, -32px + 100vw);
+            height: 561px;
+            border: 1px solid rgb(58, 77, 89);
+            border-radius: 20px;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            color: rgb(242, 245, 247);
+            box-shadow: rgba(31, 31, 31, 0.18) 0px 12px 40px 0px;
+            font: 15px / 22.5px 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .style-268 {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 12px 12px 16px;
+            border-bottom: 1px solid rgb(58, 77, 89);
+        }
+
+        .style-269 {
+            height: auto;
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+            width: 32px;
+            border-radius: 9px;
+            flex: 0 0 auto;
+        }
+
+        .style-270 {
+            box-sizing: border-box;
+            flex: 1 1 0%;
+            min-width: 0px;
+        }
+
+        .style-271 {
+            box-sizing: border-box;
+            display: block;
+            font-size: 15px;
+            line-height: 19.5px;
+        }
+
+        .style-272 {
+            box-sizing: border-box;
+            display: block;
+            color: rgb(163, 178, 188);
+            font-size: 12.5px;
+            line-height: 16.25px;
+        }
+
+        .style-273 {
+            font: 15px / 22.5px 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: rgb(242, 245, 247);
+            box-sizing: border-box;
+            flex: 0 0 auto;
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            padding: 0px;
+            border: 0px none rgb(242, 245, 247);
+            border-radius: 50%;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            cursor: pointer;
+        }
+
+        .style-274 {
+            display: block;
+            max-width: 100%;
+            box-sizing: border-box;
+            width: 18px;
+            height: 18px;
+        }
+
+        .style-276 {
+            box-sizing: border-box;
+            flex: 1 1 0%;
+            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overscroll-behavior: contain;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+        }
+
+        .style-277 {
+            box-sizing: border-box;
+            align-self: flex-start;
+            background: rgb(50, 70, 83) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgb(58, 77, 89);
+            border-bottom-left-radius: 6px;
+            max-width: 88%;
+            padding: 10px 13px;
+            border-radius: 16px 16px 16px 6px;
+            overflow-wrap: break-word;
+        }
+
+        .style-278 {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .style-279, .style-280, .style-281, .style-282 {
+            color: rgb(242, 245, 247);
+            box-sizing: border-box;
+            min-height: 40px;
+            padding: 8px 14px;
+            border: 1px solid rgb(76, 109, 128);
+            border-radius: 999px;
+            background: rgb(43, 58, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 18.2px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .style-283 {
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            padding: 10px 12px;
+            border-top: 1px solid rgb(58, 77, 89);
+        }
+
+        .style-284 {
+            color: rgb(242, 245, 247);
+            box-sizing: border-box;
+            flex: 1 1 0%;
+            min-width: 0px;
+            min-height: 46px;
+            max-height: 110px;
+            resize: none;
+            padding: 11px 13px;
+            border: 1px solid rgb(76, 109, 128);
+            border-radius: 12px;
+            background: rgb(34, 48, 58) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 22.4px;
+        }
+
+        .style-285 {
+            color: rgb(25, 32, 37);
+            box-sizing: border-box;
+            flex: 0 0 auto;
+            min-width: 68px;
+            min-height: 46px;
+            padding: 0px 16px;
+            border: 0px none rgb(25, 32, 37);
+            border-radius: 12px;
+            background: rgb(244, 241, 236) none repeat scroll 0% 0% / auto padding-box border-box;
+            font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 15px;
+            line-height: 22.5px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .style-286 {
+            box-sizing: border-box;
+            padding: 0px 12px 10px;
+            color: rgb(163, 178, 188);
+            font-size: 12.5px;
+            text-align: center;
+        }
+
+        .style-287 {
+            color: rgb(163, 178, 188);
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
+            box-sizing: border-box;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .style-76 {
+                grid-template-columns: minmax(0px, 1fr);
+                grid-template-areas: 'media' 'buy' 'details';
+            }
+            .style-224 {
+                grid-template-columns: repeat(2, minmax(0px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body class="style-0" cz-shortcut-listen="true">
+    <div class="style-1" role="note">
+        <div class="style-2">
+            <span class="style-3">Free Release</span> <span class="style-4"><b class="style-5">100% Free</b> for Minecraft <span class="style-6"><b class="style-8">Fabric 26.3</b></span> · <span class="style-9">Hosted on <a href="https://peureumen.github.io/studiohearts/mods/soundify" class="style-7">peureumen.github.io</a></span></span>
+        </div>
+    </div>
+    <header class="style-17">
+        <div class="style-18">
+            <a class="style-19" href="https://peureumen.github.io/studiohearts/"><img src="/studiohearts/assets/brand/favicon.svg" alt="" width="34" height="34" class="style-20" />StudioHearts</a>
+            <nav class="style-21" aria-label="Main">
+                <a href="https://peureumen.github.io/studiohearts/" aria-current="page" class="style-22"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-23">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" class="style-24"></path>
+                        <path d="M3 6h18" class="style-25"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0" class="style-26"></path>
+                    </svg>Mods</a>
+                <a href="https://peureumen.github.io/studiohearts/releases" class="style-27"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-28">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" class="style-29"></path>
+                        <path d="m7 10 5 5 5-5" class="style-30"></path>
+                        <path d="M12 15V3" class="style-31"></path>
+                    </svg>Releases</a>
+                <a href="https://peureumen.github.io/studiohearts/help" class="style-32"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-33">
+                        <circle cx="12" cy="12" r="10" class="style-34"></circle>
+                        <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" class="style-35"></path>
+                        <path d="M12 17h.01" class="style-36"></path>
+                    </svg>Help</a>
+            </nav>
+            <button class="style-37" type="button" aria-label="Switch to light theme"><span class="style-38"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-39">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" class="style-40"></path>
+                    </svg></span><span class="style-41"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-42">
+                        <circle cx="12" cy="12" r="4" class="style-43"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" class="style-44"></path>
+                    </svg></span></button>
+            <div class="style-45"><a class="style-46" data-download-jar="" href="https://peureumen.github.io/studiohearts/mods/soundify/downloads/soundify-fabric-26.3-1.4.1.jar" download="soundify-fabric-26.3-1.4.1.jar">Download JAR</a></div>
+        </div>
+    </header>
+    <nav class="style-47" aria-label="Main">
+        <a href="https://peureumen.github.io/studiohearts/" aria-current="page" class="style-48"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-49">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" class="style-50"></path>
+                <path d="M3 6h18" class="style-51"></path>
+                <path d="M16 10a4 4 0 0 1-8 0" class="style-52"></path>
+            </svg><span class="style-53">Mods</span></a>
+        <a href="https://peureumen.github.io/studiohearts/releases" class="style-54"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-55">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" class="style-56"></path>
+                <path d="m7 10 5 5 5-5" class="style-57"></path>
+                <path d="M12 15V3" class="style-58"></path>
+            </svg><span class="style-59">Releases</span></a>
+        <a href="https://peureumen.github.io/studiohearts/help" class="style-60"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-61">
+                <circle cx="12" cy="12" r="10" class="style-62"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" class="style-63"></path>
+                <path d="M12 17h.01" class="style-64"></path>
+            </svg><span class="style-65">Help</span></a>
     </nav>
-    <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme"><span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span><span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg></span></button>
-    
-  </div>
-</header>
-<nav class="tabbar" aria-label="Main">
-  <a href="#mods" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span>Mods</span></a>
-  <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Top</span></a>
-</nav>
+    <main class="style-71">
+        <div class="style-72">
+            <a class="style-73" href="https://peureumen.github.io/studiohearts/"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-74">
+                    <path d="m15 18-6-6 6-6" class="style-75"></path>
+                </svg>Mods</a>
+            <div class="style-76">
+                <div class="style-77">
+                    <img class="style-78" src="/studiohearts/assets/img/products/soundify-320.webp" alt="Soundify" width="320" height="320" fetchpriority="high" />
+                    <dl class="style-79">
+                        <div class="style-80">
+                            <dt class="style-81">Versions</dt>
+                            <dd data-fact="versions" class="style-82">Fabric 26.3 only</dd>
+                        </div>
+                        <div class="style-83">
+                            <dt class="style-84">Loader</dt>
+                            <dd data-fact="loader" class="style-85">Fabric</dd>
+                        </div>
+                        <div class="style-86">
+                            <dt class="style-87">License</dt>
+                            <dd class="style-88">Free · No account needed</dd>
+                        </div>
+                    </dl>
+                </div>
+                <aside class="style-89" aria-labelledby="product-name">
+                    <div class="style-90">
+                        <img class="style-91" src="/studiohearts/assets/img/products/soundify-320.webp" alt="" width="320" height="320" />
+                        <div class="style-92">
+                            <span class="style-93"><span class="style-94">Fabric 26.3</span><span class="style-95">FREE</span></span>
+                            <h1 id="product-name" class="style-96">Soundify</h1>
+                        </div>
+                    </div>
+                    <p class="style-97">New sounds for PvP, survival and everyday play.</p>
+                    <p class="style-98">Built exclusively for Minecraft <strong class="style-99">Fabric 26.3</strong> · <a href="https://peureumen.github.io/studiohearts/mods/soundify" class="style-99">peureumen.github.io/studiohearts/mods/soundify</a></p>
+                    <div class="style-100" aria-live="polite">
+                        <div class="style-128" data-pick="">
+                            <div class="style-129">
+                                <label for="pick-game" class="style-130">Game version</label>
+                                <select id="pick-game" class="style-131">
+                                    <option value="26.3" selected="" class="style-132">26.3 · Fabric (only)</option>
+                                </select>
+                            </div>
+                            <div class="style-145">
+                                <label for="pick-mod" class="style-146">Mod version</label>
+                                <select id="pick-mod" class="style-147">
+                                    <option value="1.4.1" selected="" class="style-148">1.4.1 (newest)</option>
+                                    <option value="1.4" class="style-149">1.4</option>
+                                </select>
+                            </div>
+                            <p class="style-150" data-loader-hint="">Needs Fabric 26.3 and the free Fabric API mod.</p>
+                        </div>
 
-<!-- /chrome -->
-<main class="page">
-  <div class="container stack-lg">
-    <section class="intro" aria-labelledby="intro-title">
-      <img class="intro-avatar" src="carmenicon.png" alt="" width="72" height="72">
-      <div class="intro-text">
-        <h1 id="intro-title">Carmen</h1>
-        <p>Free Minecraft mods, tools, and little projects. Made with care by Carmen.</p>
-        <nav class="intro-links" aria-label="Carmen elsewhere">
-          <a href="https://discord.gg/7WDp9NBneT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1.1-4.2A8.4 8.4 0 1 1 21 11.5Z"></path></svg>Discord</a>
-          <a href="https://www.tiktok.com/@gduckmc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>TikTok</a>
-          <a href="https://www.youtube.com/@GDuck" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3Z"></path></svg>YouTube</a>
-        </nav>
-      </div>
-    </section>
+                        <div class="download-actions">
+                            <a class="style-152" data-jar-link="" href="https://peureumen.github.io/studiohearts/mods/soundify/downloads/soundify-fabric-26.3-1.4.1.jar" download="soundify-fabric-26.3-1.4.1.jar">Download JAR</a>
+                            <a class="secondary-btn" data-releases-link="" href="https://peureumen.github.io/studiohearts/mods/soundify/releases">Releases</a>
+                        </div>
 
-    <section id="top" class="shop-section" aria-labelledby="top-title">
-      <h2 id="top-title" class="section-title">Top</h2>
-    </section>
-
-    <section id="mods" class="shop-section" aria-labelledby="mods-title">
-      <h2 id="mods-title" class="section-title">Mods</h2>
-      <div id="mod-release-grid" class="shop-grid" aria-live="polite"></div>
-    </section>
-
-    <section class="card" aria-labelledby="how-title">
-      <h2 id="how-title">How it works</h2>
-      <ol class="steps how-steps">
-        <li><strong>Explore</strong> Browse the projects and choose what you want to try.</li>
-        <li><strong>Download</strong> Get the files from the project’s download page.</li>
-        <li><strong>Install</strong> Follow the included instructions and enjoy — everything here is free.</li>
-      </ol>
-    </section>
-
-    <section aria-labelledby="faq-title">
-      <h2 id="faq-title" class="section-title">Questions</h2>
-      <div class="card faq-card">
-        <details class="faq"><summary>Are Carmen’s projects free?</summary><div class="answer">Yes. Everything featured here is free to access. There are no paid tiers, bundles, or checkout steps.</div></details>
-        <details class="faq"><summary>Where can I find the downloads?</summary><div class="answer">Open the project’s official download page or community post. Download links and installation notes will be provided with each project.</div></details>
-        <details class="faq"><summary>How do I install a Minecraft mod?</summary><div class="answer">Make sure you have the correct Minecraft version and mod loader, then place the downloaded mod file in your Minecraft mods folder. Check the project instructions for any extra requirements.</div></details>
-        <details class="faq"><summary>Need help or have a question?</summary><div class="answer">Join the Discord community and ask there. You can also follow Carmen on YouTube and TikTok for updates.</div></details>
-      </div>
-    </section>
-  </div>
-</main>
-<!-- footer: written by scripts/site-chrome.mjs -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <a class="footer-brand" href="/"><img src="carmenicon.png" alt="" width="28" height="28" loading="lazy">Carmen</a>
-        <p>Free Minecraft mods and projects.</p>
-      </div>
-      <nav class="footer-col" aria-label="Explore">
-        <h2>Explore</h2>
-        <a href="#top">Top</a>
-        <a href="#mods">Mods</a>
-      </nav>
-      <nav class="footer-col" aria-label="Community">
-        <h2>Community</h2>
-        <a href="https://discord.gg/7WDp9NBneT" target="_blank" rel="noopener">Discord</a>
-        <a href="https://www.tiktok.com/@gduckmc" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.youtube.com/@GDuck" target="_blank" rel="noopener">YouTube</a>
-      </nav>
+                        <p class="style-153">Free download · No account or DRM required.</p>
+                        <a class="style-154" href="https://peureumen.github.io/studiohearts/mods/soundify/releases">Looking for older builds or changelogs? Browse all <strong class="style-155">Fabric 26.3</strong> <span class="style-159">Releases</span>.</a>
+                    </div>
+                </aside>
+                <div class="style-160">
+                    <section class="style-161" aria-labelledby="shots-title">
+                        <div class="style-162">
+                            <h2 id="shots-title" class="style-163">Screenshots</h2> <span class="style-164">5 images</span>
+                        </div>
+                        <div class="style-165" tabindex="0" aria-label="Screenshots, scroll sideways">
+                            <figure class="style-166">
+                                <button type="button" class="style-167" data-shot="0" aria-label="View screenshot 1: Change any sound: volume, pitch, or a file of your own.">
+                                    <img src="/studiohearts/assets/img/soundify/1-480.webp" alt="Change any sound: volume, pitch, or a file of your own." width="480" height="270" loading="lazy" decoding="async" class="style-168" /> </button>
+                                <figcaption class="style-169">Change any sound: volume, pitch, or a file of your own.</figcaption>
+                            </figure>
+                            <figure class="style-170">
+                                <button type="button" class="style-171" data-shot="1" aria-label="View screenshot 2: Sounds are grouped: items, player, GUI, effects, blocks, explosions.">
+                                    <img src="/studiohearts/assets/img/soundify/2-480.webp" alt="Sounds are grouped: items, player, GUI, effects, blocks, explosions." width="480" height="270" loading="lazy" decoding="async" class="style-172" /> </button>
+                                <figcaption class="style-173">Sounds are grouped: items, player, GUI, effects, blocks, explosions.</figcaption>
+                            </figure>
+                            <figure class="style-174">
+                                <button type="button" class="style-175" data-shot="2" aria-label="View screenshot 3: Underwater audio and reverb settings.">
+                                    <img src="/studiohearts/assets/img/soundify/3-480.webp" alt="Underwater audio and reverb settings." width="480" height="270" loading="lazy" decoding="async" class="style-176" /> </button>
+                                <figcaption class="style-177">Underwater audio and reverb settings.</figcaption>
+                            </figure>
+                            <figure class="style-178">
+                                <button type="button" class="style-179" data-shot="3" aria-label="View screenshot 4: Enchantments like Multishot get their own sound.">
+                                    <img src="/studiohearts/assets/img/soundify/4-480.webp" alt="Enchantments like Multishot get their own sound." width="480" height="270" loading="lazy" decoding="async" class="style-180" /> </button>
+                                <figcaption class="style-181">Enchantments like Multishot get their own sound.</figcaption>
+                            </figure>
+                            <figure class="style-182">
+                                <button type="button" class="style-183" data-shot="4" aria-label="View screenshot 5: Bows and tridents sound different with Power or Lunge.">
+                                    <img src="/studiohearts/assets/img/soundify/5-480.webp" alt="Bows and tridents sound different with Power or Lunge." width="480" height="270" loading="lazy" decoding="async" class="style-184" /> </button>
+                                <figcaption class="style-185">Bows and tridents sound different with Power or Lunge.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section class="style-186" aria-labelledby="about-title">
+                        <h2 id="about-title" class="style-187">About Soundify</h2>
+                        <p class="style-188">New sounds for fights, bows, potions and everyday actions. You can change the volume and pitch of any sound, or use your own file.</p>
+                        <h3 class="style-189">What you get</h3>
+                        <ul class="style-190">
+                            <li class="style-191">New sounds for hits, bows, tridents and enchantments</li>
+                            <li class="style-192">Volume and pitch for every sound, or your own file</li>
+                            <li class="style-193">Underwater audio and reverb settings</li>
+                            <li class="style-194">Free for Minecraft Fabric 26.3</li>
+                        </ul>
+                    </section>
+                    <section class="style-195" aria-labelledby="versions-title">
+                        <h2 id="versions-title" class="style-196">Versions</h2>
+                        <div class="style-197">
+                            <dl class="style-198">
+                                <div class="style-199">
+                                    <dt class="style-200">Fabric</dt>
+                                    <dd class="style-201">26.3 only</dd>
+                                </div>
+                            </dl>
+                            <p class="style-208">This free build targets Minecraft Fabric 26.3 exclusively.</p>
+                        </div>
+                    </section>
+                    <section class="style-209" aria-labelledby="install-title">
+                        <h2 id="install-title" class="style-210">Install</h2>
+                        <ol class="style-211">
+                            <li class="style-212">Install Fabric Loader for Minecraft 26.3 and the free Fabric API mod.</li>
+                            <li class="style-213">Download the .jar and place it in your <code>mods</code> folder.</li>
+                            <li class="style-214">Launch Minecraft 26.3 with Fabric and play right away—no sign-in required.</li>
+                        </ol>
+                        <p class="style-215"><a href="https://peureumen.github.io/studiohearts/help#install" class="style-216">Full install guide</a></p>
+                        <h3 class="style-217">Free &amp; unrestricted</h3>
+                        <p class="style-218">Soundify is free to download and use on your devices for Minecraft Fabric 26.3.</p>
+                    </section>
+                </div>
+            </div>
+            <noscript class="style-221">
+                <p class="notice">This page needs JavaScript for interactive previews, though direct downloads and releases links still work.</p>
+            </noscript>
+        </div>
+    </main>
+    <footer class="style-222">
+        <div class="style-223">
+            <div class="style-224">
+                <div class="style-225">
+                    <a class="style-226" href="https://peureumen.github.io/studiohearts/"><img src="/studiohearts/assets/brand/favicon.svg" alt="" width="28" height="28" loading="lazy" class="style-227" />StudioHearts</a>
+                    <p class="style-228">Free Minecraft Fabric 26.3 mods hosted on GitHub Pages.</p>
+                </div>
+                <nav class="style-229" aria-label="Mods">
+                    <h2 class="style-230">Mods</h2>
+                    <a href="https://peureumen.github.io/studiohearts/" class="style-231">All mods</a>
+                    <a href="https://peureumen.github.io/studiohearts/mods/soundify" class="style-232">Soundify</a>
+                    <a href="https://peureumen.github.io/studiohearts/mods/soundify/releases" class="style-233">Releases</a>
+                </nav>
+                <nav class="style-235" aria-label="Help">
+                    <h2 class="style-236">Help</h2>
+                    <a href="https://peureumen.github.io/studiohearts/help" class="style-237">Install guide</a>
+                    <a href="https://peureumen.github.io/studiohearts/help#faq" class="style-238">FAQ</a>
+                    <a href="mailto:support@studiohearts.site" class="style-240">support@studiohearts.site</a>
+                </nav>
+                <nav class="style-241" aria-label="Community">
+                    <h2 class="style-242">Community</h2>
+                    <a href="https://discord.gg/7WDp9NBneT" target="_blank" rel="noopener" class="style-243">Discord</a>
+                    <a href="https://www.tiktok.com/@gduckmc" target="_blank" rel="noopener" class="style-244">TikTok</a>
+                    <a href="https://www.youtube.com/@GDuck" target="_blank" rel="noopener" class="style-245">YouTube</a>
+                </nav>
+                <nav class="style-246" aria-label="Project">
+                    <h2 class="style-247">Project</h2>
+                    <a href="https://peureumen.github.io/studiohearts/" class="style-248">peureumen.github.io/studiohearts</a>
+                    <a href="https://peureumen.github.io/studiohearts/terms" class="style-249">Terms</a>
+                    <a href="https://peureumen.github.io/studiohearts/privacy" class="style-250">Privacy</a>
+                </nav>
+            </div>
+            <div class="style-251">
+                <span class="style-252">© <span data-year="" class="style-253">2026</span> StudioHearts</span>
+                <span class="style-254">Independent, unofficial mods. Not affiliated with the game's developer.</span>
+            </div>
+        </div>
+    </footer>
+    <dialog class="style-255" aria-label="Soundify screenshots">
+        <div class="style-256">
+            <img alt="" class="style-257" />
+            <div class="style-258">
+                <button type="button" class="style-259" data-step="-1" aria-label="Previous screenshot">‹</button>
+                <p class="style-260" aria-live="polite"></p>
+                <button type="button" class="style-261" data-step="1" aria-label="Next screenshot">›</button>
+            </div>
+            <button type="button" class="style-262" aria-label="Close">×</button>
+        </div>
+    </dialog>
+    <div class="style-263"><button class="style-264" type="button" aria-label="Open help chat" aria-expanded="false" aria-controls="gsc-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="style-265">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" class="style-266"></path>
+            </svg></button>
+        <section class="style-267" id="gsc-panel" role="dialog" aria-label="Help chat" hidden="">
+            <div class="style-268"><img src="/studiohearts/assets/brand/favicon.svg" alt="" width="32" height="32" class="style-269" />
+                <div class="style-270"><strong class="style-271">StudioHearts Help</strong><small class="style-272">Automatic helper · answers in seconds</small></div><button class="style-273" type="button" aria-label="Close help chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" class="style-274">
+                        <path d="M18 6 6 18M6 6l12 12" class="style-275"></path>
+                    </svg></button>
+            </div>
+            <div class="style-276" aria-live="polite">
+                <div class="style-277">Hi! Ask me about downloading the Fabric 26.3 JAR, viewing releases, or installing the mod.</div>
+                <div class="style-278"><button type="button" class="style-279">Where do I put the .jar?</button><button type="button" class="style-280">Does it work on 1.21.1 or 26.2?</button><button type="button" class="style-281">Where are older mod versions?</button><button type="button" class="style-282">Is it really free?</button></div>
+            </div>
+            <form class="style-283"><textarea class="style-284" rows="1" maxlength="1500" placeholder="Type your question…" aria-label="Your question"></textarea><button class="style-285" type="submit">Send</button></form>
+            <div class="style-286">Need a person? <a href="https://discord.gg/7WDp9NBneT" target="_blank" rel="noopener noreferrer" class="style-287">Open a ticket on Discord</a></div>
+        </section>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year="">2026</span> Carmen</span>
-      <span>Independent, unofficial mods. Not affiliated with the game's developer.</span>
-    </div>
-  </div>
-</footer>
-<!-- /footer -->
-<script src="scripts.js"></script></body></html>
+
+    <script>
+        (function () {
+            const BASE_URL = "https://peureumen.github.io/studiohearts/mods";
+            const pathParts = window.location.pathname.split("/").filter(Boolean);
+            const modsIdx = pathParts.indexOf("mods");
+            const modname = (modsIdx !== -1 && pathParts[modsIdx + 1]) ? pathParts[modsIdx + 1] : "soundify";
+
+            const modSelect = document.getElementById("pick-mod");
+            const jarLinks = document.querySelectorAll("[data-jar-link], [data-download-jar]");
+            const releasesLinks = document.querySelectorAll("[data-releases-link]");
+
+            function syncUrls() {
+                const modVer = modSelect ? modSelect.value : "1.4.1";
+                const jarUrl = `${BASE_URL}/${modname}/downloads/${modname}-fabric-26.3-${modVer}.jar`;
+                const releasesUrl = `${BASE_URL}/${modname}/releases`;
+
+                jarLinks.forEach((el) => {
+                    el.setAttribute("href", jarUrl);
+                    el.setAttribute("download", `${modname}-fabric-26.3-${modVer}.jar`);
+                });
+                releasesLinks.forEach((el) => {
+                    el.setAttribute("href", releasesUrl);
+                });
+            }
+
+            if (modSelect) {
+                modSelect.addEventListener("change", syncUrls);
+            }
+            syncUrls();
+        })();
+    </script>
+</body>
+
+</html>
