@@ -947,3 +947,8 @@ details.faq .answer { padding: 0px 0px 16px; color: var(--text-2); }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-about { grid-column: 1 / -1; }
 }
+
+/* GitHub release cards */
+.github-release-card { min-height: 0; }
+.github-release-notes { white-space: pre-line; overflow-wrap: anywhere; }
+.github-release-actions { flex-wrap: wrap; justify-content: flex-start; }
