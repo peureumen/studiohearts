@@ -25,7 +25,7 @@ const SITE = {
 
 // ---------------------------------------------------------------------------
 // MOD LIST: edit this to add or change mods.
-//   slug        -> the page lives at  /studiohearts/mods/<slug>/   (folder name must match)
+//   slug        -> the page lives at /mods/<slug>/ (folder name must match)
 //   repo + tag  -> the GitHub release the Download button pulls the .jar from
 //   tagline     -> one line shown on the home card and at the top of the mod page
 //   about       -> description on the mod page (blank line = new paragraph)
@@ -36,9 +36,10 @@ const githubMods = [
   {
     slug: "advanced-compass",
     name: "Advanced Compass++",
-    repo: "peureumen/snb",
-    tag: "advcomreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/advthmb.png",
+    repo: "peureumen/mods",
+    tag: null,
+    releasePattern: /advanced[-_ ]?compass|advcom/i,
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/advthmb.png",
     tagline: "An unnoficial port of Advanced Compass",          // TODO: write your own
     about: "",                                                    // TODO: describe the mod
     features: [],                                                 // TODO: e.g. ["Feature one", "Feature two"]
@@ -47,9 +48,10 @@ const githubMods = [
   {
     slug: "after-effects-plus",
     name: "After Effects+",
-    repo: "peureumen/snb",
-    tag: "afteffreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/aethmb.png",
+    repo: "peureumen/mods",
+    tag: null,
+    releasePattern: /after[-_ ]?effects|afteff/i,
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/aethmb.png",
     tagline: "An unnoficial port of Combat Effects",
     about: "",
     features: [],
@@ -58,9 +60,10 @@ const githubMods = [
   {
     slug: "shouldersandbeyond",
     name: "ShouldersAndBeyond",
-    repo: "peureumen/snb",
-    tag: "snbreleases",
-    thumbnail: "https://raw.githubusercontent.com/peureumen/snb/refs/heads/main/snbthmb.png",
+    repo: "peureumen/mods",
+    tag: null,
+    releasePattern: /shoulders?[-_ ]?and[-_ ]?beyond|snb/i,
+    thumbnail: "https://raw.githubusercontent.com/peureumen/mods/refs/heads/main/snbthmb.png",
     tagline: "Punchy! Moves' shoulder surfing camera standalone",
     about: "",
     features: [],
@@ -115,14 +118,29 @@ function fetchReleases(repo) {
     });
 }
 
-function latestRelease(releases, tag) {
-  // Accept the exact tag or versioned tags beginning with the mod's tag.
-  const matching = releases.filter(r =>
-    !r.draft && !r.prerelease &&
-    (r.tag_name === tag || r.tag_name.startsWith(tag + "-") || r.tag_name.startsWith(tag + "_"))
-  );
-  matching.sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
-  return matching[0] || null;
+function latestRelease(releases, mod) {
+  const published = releases.filter(r => !r.draft && !r.prerelease);
+  if (mod.tag) {
+    const matching = published.filter(r =>
+      r.tag_name === mod.tag ||
+      r.tag_name.startsWith(mod.tag + "-") ||
+      r.tag_name.startsWith(mod.tag + "_")
+    );
+    matching.sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
+    return matching[0] || null;
+  }
+
+  if (mod.releasePattern) {
+    const matching = published.filter(r => {
+      const releaseText = `${r.tag_name || ""} ${r.name || ""}`;
+      const assetText = (r.assets || []).map(a => a.name || "").join(" ");
+      return mod.releasePattern.test(releaseText) || mod.releasePattern.test(assetText);
+    });
+    matching.sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
+    return matching[0] || null;
+  }
+
+  return published.sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at))[0] || null;
 }
 
 function pickJar(release) {
@@ -244,7 +262,7 @@ function pickJar(release) {
 
   fetchReleases(mod.repo)
     .then(releases => {
-      const release = latestRelease(releases, mod.tag);
+      const release = latestRelease(releases, mod);
       if (!release) throw new Error("No published release found.");
       const jar = pickJar(release);
       const label = release.name || release.tag_name;
